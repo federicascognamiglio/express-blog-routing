@@ -6,13 +6,14 @@ const posts = require("../data/posts-data");
 // ROUTERS
 // Router "index"
 router.get("/", (req, res) => {
-    res.send("Leggo tutti i post")
+    res.json({posts, total: posts.length})
 })
 
 // Router "show"
 router.get("/:id", (req, res) => {
     const postId = req.params.id;
-    res.send("Leggo i dati del post con id " + postId)
+    const getPost = posts.find((curPost) => curPost.id == postId)
+    res.json(getPost)
 })
 
 // Router "create"
