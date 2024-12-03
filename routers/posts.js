@@ -8,3 +8,11 @@ const posts = require("../data/posts-data");
 router.get("/", (req, res) => {
     res.send("Leggo tutti i dati")
 })
+
+// Router "show"
+router.get("/:id", (req, res) => {
+    const postId = req.params.id;
+    res.send("Leggo i dati dell'elemento con id " + postId)
+})
+
+module.exports = router;
