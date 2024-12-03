@@ -15,4 +15,9 @@ router.get("/:id", (req, res) => {
     res.send("Leggo i dati dell'elemento con id " + postId)
 })
 
+// Router "create"
+router.post("/", (req, res) => {
+    res.send("Creo un nuovo elemento")
+})
+
 module.exports = router;
