@@ -20,4 +20,18 @@ router.post("/", (req, res) => {
     res.send("Creo un nuovo elemento")
 })
 
+// Router "update"
+router.put("/:id", (req, res) => {
+    const postId = req.params.id;
+    res.send("Aggiorno tutti i dati dell'elemento con id " + postId)
+})
+
+// Router "modify"
+router.patch("/:id", (req, res) => {
+    const postId = req.params.id;
+    res.send("Aggiorno solo i dati modificati dell'elemento con id " + postId)
+})
+
+
+
 module.exports = router;
